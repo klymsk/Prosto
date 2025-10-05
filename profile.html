@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel = "stylesheet" href = "styles/profileStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href = "index.html">
+            <h1>Prosto.</h1>
+        </a>
+
+        <section class = "searchBox">
+            <input placeholder = "Пошук">
+
+            <div class = "buttonHeader">
+                <img src = "assets/search.png" alt = "search">
+            </div>
+        </section>
+
+        <section class = "buttonsBox">
+            <div class = "buttonHeader">
+                <img src = "assets/cart.png" alt = "cart">
+            </div>
+
+            <a href = "profile.html">
+                <div class = "buttonHeader">
+                    <img src = "assets/profile.png" alt = "profile">
+                </div>
+            </a>
+        </section>
+    </header>
+
+    <main>
+        <aside>
+            <p>Особиста інформація</p>
+            <p>Історія замовлень</p>
+        </aside>
+
+        <article>
+            <h2>Особиста інформація</h2>
+
+            <section class = "userInfo">
+                <img src = "assets/user.png" alt = "userImg">
+
+                <section class = "userList">
+                    <div class = "userInput">
+                        <label for="firstName">Ім’я</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="firstName" value="Володимир" readonly>
+                            <span class="edit-icon">✏️</span>
+                        </div>
+                    </div>
+
+                    <div class = "userInput">
+                        <label for="lastName">Прізвище</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="lastName" value="Зеленський" readonly>
+                            <span class="edit-icon">✏️</span>
+                        </div>
+                    </div>
+
+                    <div class = "userInput">
+                        <label for="phone">Номер телефону</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="phone" value="+380(95) 123 45 67" readonly>
+                            <span class="edit-icon">✏️</span>
+                        </div>
+                    </div>
+
+                    <div class = "userInput">
+                        <label for="email">Електронна пошта</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" value="test@gmail.com" readonly>
+                            <span class="edit-icon">✏️</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class = "footerInfo">
+            <p>Головна</p>
+            <a href = "contacts.html">Котакти</a>
+            <p>Профіль</p>
+        </div>
+
+        <h3>Prosto.</h3>
+
+        <div class = "footerInfo">
+            <p>095 345 67 89</p>
+            <p>example@gmail.com</p>
+            <p>м . Київ, вул. Володимирська 7</p>
+        </div>
+    </footer>
+</body>
+</html>

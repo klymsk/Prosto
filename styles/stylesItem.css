@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: "Unbounded";
+    --white-color: white;
+    --gray-color: #F3F3F3;
+    --beige-color: #D2C1B6;
+    --blue-color: #1B3C53;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 2rem solid var(--beige-color);
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 {
+    font-family: var(--font-family);
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.searchBox input {
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 3rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 300;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttonHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige-color);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.buttonsBox {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray-color);
+    padding: 1rem 2rem;
+    height: 6rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 100;
+    color: black;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding: 5rem 2rem;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    font-family: var(--font-family);
+    height: 40rem;
+    padding: 5rem 3rem;
+}
+
+article img {
+    height: 100%;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.itemInfo h2 {
+    font-family: var(--font-family);
+    color: black;
+    font-size: 3rem;
+    font-weight: 900;
+    width: 60%;
+}
+
+.buyBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.buyBox p {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--blue-color);
+}
+
+.buyBox button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 0rem;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white-color);
+    width: 40%;
+    cursor: pointer;
+}
+
+.subMain {
+    display: flex;
+    gap: 4rem;
+}
+
+.descriptionItem {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    width: 80%;
+}
+
+.descriptionItem h3 {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mainInfo p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 100;
+    color: black;
+}
+
+.techInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.techDetail {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+}
+
+.reviewsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: var(--font-family);
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+}
+
+.review P {
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user p:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.user p:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 100;
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--beige-color);
+    height: 10rem;
+    font-family: var(--font-family);
+    padding: 3rem 2rem;
+}
+
+footer h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--blue-color);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--blue-color);
+}
+
+.footerInfo:nth-child(3) {
+    align-items: end;
+}
+
+.footerInfo p {
+    cursor: pointer;
+}
