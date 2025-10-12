@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel = "stylesheet" href = "styles/profileStyles.css">
+    <link rel = "stylesheet" href = "styles/profileSaleStyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
@@ -39,27 +39,27 @@
     <main>
         <article>
             <section class = "mainInfo">
-                <h2>Особиста інформація</h2>
+                <h2>Юридична особа</h2>
 
                 <section class = "userList">
                     <div class = "userInput">
-                        <label for="firstName">Ім’я</label>
-                        <input type="text" id="firstName">
+                        <label for="compName">Назва компанії</label>
+                        <input type="text" id="compName">
                     </div>
 
                     <div class = "userInput">
-                        <label for="firstName">Прізвище</label>
-                        <input type="text" id="surName">
+                        <label for="edrpou">ЄДРПОУ</label>
+                        <input type="text" id="edrpou">
                     </div>
 
                     <div class = "userInput">
-                        <label for="firstName">Номер телефону</label>
-                        <input type="text" id="phoneNum">
+                        <label for="iban">IBAN</label>
+                        <input type="text" id="iban">
                     </div>
 
                     <div class = "userInput">
-                        <label for="firstName">Електронна пошта</label>
-                        <input type="text" id="email">
+                        <label for="type">Тип компанії</label>
+                        <input type="text" id="type">
                     </div>
                 </section>
 
@@ -67,27 +67,29 @@
             </section>
 
             <section class = "mainInfo">
-                <h2>Інформація про доставку</h2>
+                <h2>Узагальнена інформація</h2>
 
-                <section class = "userList">
-                    <div class = "userInput">
-                        <label for="firstName">Місто</label>
-                        <input type="text" id="city">
-                    </div>
+                <section class = "saleInfo">
+                    <section class = "additionalList">
+                        <div class = "userInput">
+                            <label for="category">Категорія зайнятості</label>
+                            <input type="text" id="category">
+                        </div>
 
-                    <div class = "userInput">
-                        <label for="firstName">Адреса</label>
-                        <input type="text" id="address">
-                    </div>
+                        <div class = "userInput">
+                            <label for="saleAddress">Юридична адреса</label>
+                            <input type="text" id="saleAddress">
+                        </div>
 
-                    <div class = "userInput">
-                        <label for="firstName">Віділення</label>
-                        <input type="text" id="shop">
-                    </div>
+                        <div class = "userInput">
+                            <label for="saleFactory">Адреса потужностей</label>
+                            <input type="text" id="saleFactory">
+                        </div>
+                    </section>
 
-                    <div class = "userInput">
-                        <label for="firstName">Спосіб оплати</label>
-                        <input type="text" id="pay">
+                    <div class = "saleDescription">
+                        <label for="description">Короткий опис</label>
+                        <textarea id="description"></textarea>
                     </div>
                 </section>
 
@@ -96,7 +98,7 @@
         </article>
 
         <aside>
-            <p>Змінити акаунт</p>
+            <p>Додати новий товар</p>
             <p>Тех підтримка</p>
             <p>Контакти</p>
             <p>Вихід</p>

@@ -155,6 +155,44 @@ article h2 {
     width: 20rem;
 }
 
+.saleInfo {
+    display: flex;
+    gap: 30%;
+}
+
+.additionalList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.saleDescription {
+    display: flex;
+    flex-direction: column;
+}
+
+.saleDescription label {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: black;
+}
+
+.saleDescription textarea {
+    width: 25rem;         
+    height: 12rem;        
+    border: none;
+    outline: none;
+    border-radius: 20px;   
+    background-color: white;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem;
+    resize: none;        
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     display: flex;
     justify-content: space-between;
