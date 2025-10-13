@@ -162,7 +162,7 @@ main {
 
 @media (max-width: 768px) {
     main {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 10rem 1rem;
         gap: 3rem;
     }
 }
@@ -223,10 +223,29 @@ article {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .item {
+        width: 12rem;
+        height: 25rem;
+        padding: 1rem;
+    }
+
+    .item img {
+        height: 50%;
+        object-fit: contain;
+    }
+}
+
 .item p {
     font-size: 1.2rem;
     font-weight: 600;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .item p {
+        font-size: 1rem;
+    }
 }
 
 .buyBox {
@@ -242,6 +261,12 @@ article {
     color: var(--blue-color);
 }
 
+@media (max-width: 768px) {
+    .buyBox p {
+        font-size: 1.5rem;
+    }
+}
+
 .buyBox button {
     display: flex;
     justify-content: center;
@@ -255,6 +280,13 @@ article {
     font-weight: 600;
     color: var(--white-color);
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .buyBox button {
+        padding: 0.5rem 0rem;
+        font-size: 1rem;
+    }
 }
 
 footer {

@@ -19,6 +19,13 @@ header {
     border-bottom: 2rem solid var(--beige-color);
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        border-bottom: 1rem solid var(--beige-color);
+    }
+}
+
 header a {
     text-decoration: none;
 }
@@ -30,10 +37,22 @@ header h1 {
     font-weight: 900;
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1rem;
+    }
+}
+
 .searchBox {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .searchBox {
+        justify-content: center;
+    }
 }
 
 .searchBox input {
@@ -44,6 +63,14 @@ header h1 {
     font-size: 1rem;
     font-weight: 300;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .searchBox input {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        width: 40%;
+    }
 }
 
 .buttonHeader {
@@ -59,9 +86,28 @@ header h1 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .buttonHeader {
+        width: 1rem;
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttonHeader img {
+        width: 100%;
+    }
+}
+
 .buttonsBox {
     display: flex;
     gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .buttonsBox {
+        gap: 0.5rem;
+    }
 }
 
 .category {
@@ -75,11 +121,29 @@ header h1 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .category {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .category img {
+        height: 3rem;
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 3rem 2rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 1rem 10rem 1rem;
+        gap: 2rem;
+    }
 }
 
 main h2 {
@@ -88,6 +152,13 @@ main h2 {
     font-weight: 900;
     color: black;
     margin-left: 20%;
+}
+
+@media (max-width: 768px) {
+    main h2 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
 }
 
 .subMain {
@@ -104,6 +175,12 @@ aside {
     border-radius: 20px;
     padding: 2rem 1rem;
     width: 20rem;
+}
+
+@media (max-width: 768px) {
+    aside {
+        display: none;
+    }
 }
 
 aside h3 {
@@ -136,12 +213,25 @@ aside h3 {
     gap: 4rem;
 }
 
+@media (max-width: 768px) {
+    .catalog {
+        overflow-x: auto;
+    }
+}
+
 .catalogLine {
     display: flex;
     justify-content: space-between;
 }
 
-.catalogLine a{
+@media (max-width: 768px) {
+    .catalogLine {
+        overflow-x: auto;
+        gap: 2rem;
+    }
+}
+
+.catalogLine a {
     text-decoration: none;
 }
 
@@ -159,10 +249,29 @@ aside h3 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .item {
+        width: 12rem;
+        height: 25rem;
+        padding: 1rem;
+    }
+
+    .item img {
+        height: 50%;
+        object-fit: contain;
+    }
+}
+
 .item p {
     font-size: 1.2rem;
     font-weight: 600;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .item p {
+        font-size: 1rem;
+    }
 }
 
 .buyBox {
@@ -176,6 +285,12 @@ aside h3 {
     font-size: 2rem;
     font-weight: 900;
     color: var(--blue-color);
+}
+
+@media (max-width: 768px) {
+    .buyBox p {
+        font-size: 1.5rem;
+    }
 }
 
 .buyBox button {
@@ -193,6 +308,13 @@ aside h3 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .buyBox button {
+        padding: 0.5rem 0rem;
+        font-size: 1rem;
+    }
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -201,6 +323,15 @@ footer {
     height: 10rem;
     font-family: var(--font-family);
     padding: 3rem 2rem;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        height: auto;
+    }
 }
 
 footer h3 {
@@ -224,6 +355,12 @@ footer a {
 
 .footerInfo:nth-child(3) {
     align-items: end;
+}
+
+@media (max-width: 768px) {
+    .footerInfo:nth-child(3) {
+        align-items: center;
+    }
 }
 
 .footerInfo p {
