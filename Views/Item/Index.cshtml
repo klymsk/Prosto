@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/stylesItem.css" asp-append-version="true" />
+}
+<main>
+    <article>
+        <img src="assets/item/iphoneItem.png" alt="item">
+
+        <section class="itemInfo">
+            <h2>Iphone 17 Pro 256GB Deep Blue</h2>
+
+            <div class="buyBox">
+                <p>63 999 ₴</p>
+                <button>Купити</button>
+            </div>
+        </section>
+    </article>
+
+    <section class="subMain">
+        <section class="descriptionItem">
+            <div class="mainInfo">
+                <h3>Опис товару</h3>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+
+            <div class="techInfo">
+                <h3>Характеристики</h3>
+
+                <div class="techDetail">
+                    <p>Дисплей</p>
+                    <p>6.3</p>
+                </div>
+
+                <div class="techDetail">
+                    <p>Обсяг пам`яті</p>
+                    <p>256GB</p>
+                </div>
+
+                <div class="techDetail">
+                    <p>Камера</p>
+                    <p>144 МП</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviewsItem">
+            @for (int i = 0; i < 3; i++)
+            {
+                <div class="review">
+                    <div class="user">
+                        <p>Name</p>
+                        <p>04.10.2025</p>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+            }
+        </section>
+    </section>
+</main>

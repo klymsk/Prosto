@@ -1,0 +1,43 @@
+﻿@model Prosto.Models.Customer
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Реєстрація";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/authorizationStyles.css" asp-append-version="true" />
+}
+<main>
+    <article>
+        <h2>Реєстрація користувача</h2>
+
+        <form action="@Url.Action("Register", "UserProfile")" method="post">
+            <div class="userInput">
+                <label for="fullName">ПІБ</label>
+                <input asp-for="FullName" placeholder="Іван Іванов" id="fullName" required />
+            </div>
+            <div class="userInput">
+                <label for="email">Електронна пошта</label>
+                <input asp-for="Email" placeholder="example@gmail.com" id="email" type="email" required />
+            </div>
+            <div class="userInput">
+                <label for="phoneNumber">Номер телефону</label>
+                <input asp-for="PhoneNumber" placeholder="+380" id="phoneNumber" type="number" required />
+            </div>
+            <div class="userInput">
+                <label for="password">Пароль</label>
+                <input asp-for="Password" type="password" placeholder="***" id="password" required />
+            </div>
+            <button type="submit" id="submitButton">Зареєструватися</button>
+        </form>
+        <hr>
+        <p>Уже є акаунт? <a href="@Url.Action("Login", "UserProfile")">Вхід</a></p>
+        <a href="@Url.Action("LoginWithGoogle", "UserProfile")" class="google-btn">
+            <img src="~/assets/google.png" alt="google icon"> Увійти з Google
+        </a>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="text-danger">@Html.ValidationSummary()</div>
+        }
+    </article>
+</main>

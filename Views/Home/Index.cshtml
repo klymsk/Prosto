@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/homeStyles.css" asp-append-version="true" />
+}
+<nav>
+    <a href="@Url.Action("Category", "Home")">
+        <div class="category">
+            <img src="assets/nav/smartphone.png" alt="smartphone">
+            <p>Смартфони</p>
+        </div>
+    </a>
+
+    <div class="category">
+        <img src="assets/nav/laptop.png" alt="laptop">
+        <p>Ноутбуки</p>
+    </div>
+
+    <div class="category">
+        <img src="assets/nav/auto.png" alt="auto">
+        <p>Авто</p>
+    </div>
+
+    <div class="category">
+        <img src="assets/nav/office.png" alt="office">
+        <p>Офіс</p>
+    </div>
+
+    <div class="category">
+        <img src="assets/nav/sport.png" alt="sport">
+        <p>Спорт</p>
+    </div>
+
+    <div class="category">
+        <img src="assets/nav/cloth.png" alt="cloth">
+        <p>Одяг</p>
+    </div>
+
+    <div class="category">
+        <img src="assets/nav/zoo.png" alt="zoo">
+        <p>Зоотовари</p>
+    </div>
+</nav>
+
+<main>
+    <article>
+        <h2>Promo</h2>
+        <h2>-30%</h2>
+    </article>
+
+    <section class="catalog">
+        @for (int i = 0; i < 3; i++)
+        {
+            <section class="catalogLine">
+                @for (int j = 0; j < 4; j++)
+                {
+                    <a href="@Url.Action("Index", "Item")" class="item">
+                        <section class="item">
+                            <img src="assets/item/iphone.png" alt="itemImg">
+
+                            <p>Iphone 17 Pro 256GB Deep Blue</p>
+
+                            <div class="buyBox">
+                                <p>63 999 ₴</p>
+                                <button>Купити</button>
+                            </div>
+                        </section>
+                    </a>
+                }
+            </section>
+        }
+    </section>
+</main>

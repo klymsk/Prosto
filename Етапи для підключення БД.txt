@@ -1,0 +1,10 @@
+Етапи для підключення БД іншим користувачам.
+1. Повинна бути скачений SQL Managment studio
+2. Повинна бути створена пуста бд із назваю Prosto
+3. Повинні в VS скачані такі бібліотеки: Microsoft.EntityFrameworkCore,  Microsoft.EntityFrameworkCore.Sql, Microsoft.EntityFrameworkCore.Tools (в Nuget package manager)
+4. Змніть файл appseting.json (в полі Server name пропишіть своє Server name, яке в SQL Managment studio)
+5. В Nuget manager console пропишіть такі команди:
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+Готово =), за питаннями пишіть в тг
