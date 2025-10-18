@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Prosto.Models;
+using System.Security.Claims;
 
 namespace Prosto.Controllers
 {
@@ -95,9 +96,12 @@ namespace Prosto.Controllers
             var principal = externalResult?.Principal ?? result?.Principal;
             if (principal == null) return RedirectToAction("Login");
 
-            var email = principal.Claims.FirstOrDefault(c => c.Type.Contains("email"))?.Value;
-            var name = principal.Claims.FirstOrDefault(c => c.Type.Contains("name"))?.Value;
-            var picture = principal.FindFirst(c => c.Type.Contains("picture"))?.Value;
+            var claims = result.Principal.Identities.First().Claims.ToList();
+
+            var email = claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value
+                ?? claims.FirstOrDefault(c => c.Type.Contains("email"))?.Value;
+            var name = claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value
+                       ?? claims.FirstOrDefault(c => c.Type.Contains("name"))?.Value;
 
             var user = _context.Customers.FirstOrDefault(u => u.Email == email);
             if (user == null)
@@ -116,7 +120,6 @@ namespace Prosto.Controllers
             HttpContext.Session.SetInt32("UserId", user.UserId);
             HttpContext.Session.SetString("FullName", user.FullName);
             HttpContext.Session.SetString("Email", email);
-            HttpContext.Session.SetString("Picture", picture ?? "/assets/user.png");
 
             return RedirectToAction("Index");
         }

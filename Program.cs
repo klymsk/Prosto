@@ -24,6 +24,10 @@ public class Program
         {
             options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
             options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+
+            options.Scope.Add("profile");  // додає ім’я, аватар та інші базові дані
+            options.SaveTokens = true;     // зберігає токени для подальшого використання
+
         });
         builder.Services.AddHttpContextAccessor();
 
