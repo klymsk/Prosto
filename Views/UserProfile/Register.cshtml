@@ -13,7 +13,7 @@
         <form action="@Url.Action("Register", "UserProfile")" method="post">
             <div class="userInput">
                 <label for="fullName">ПІБ</label>
-                <input asp-for="FullName" placeholder="Іван Іванов" id="fullName" required />
+                <input asp-for="FullName" placeholder="Іван Іванов" id="fullName" maxlength="500" required />
             </div>
             <div class="userInput">
                 <label for="email">Електронна пошта</label>
@@ -21,11 +21,15 @@
             </div>
             <div class="userInput">
                 <label for="phoneNumber">Номер телефону</label>
-                <input asp-for="PhoneNumber" placeholder="+380" id="phoneNumber" type="number" required />
+                <input asp-for="PhoneNumber" placeholder="+380" id="phoneNumber" type="tel" pattern="\+380[0-9]{9}" maxlength="13" required />
             </div>
             <div class="userInput">
                 <label for="password">Пароль</label>
-                <input asp-for="Password" type="password" placeholder="***" id="password" required />
+                <input asp-for="Password" type="password" placeholder="***" id="password" minlength="8" maxlength="16" required />
+            </div>
+            <div class="userInput">
+                <label for="passwordConfirmation">Підтвердження паролю</label>
+                <input type="password" placeholder="***" name="PasswordConfirmation" id="passwordConfirmation" minlength="8" maxlength="16" required />
             </div>
             <button type="submit" id="submitButton">Зареєструватися</button>
         </form>

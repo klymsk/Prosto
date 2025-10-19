@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Prosto.Models;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 
 namespace Prosto.Controllers
 {
@@ -42,6 +43,32 @@ namespace Prosto.Controllers
         [HttpPost]
         public IActionResult Register(Customer model)
         {
+            var passwordConfirmation = Request.Form["PasswordConfirmation"];
+
+            if (!Regex.IsMatch(model.Password, @"\d"))
+            {
+                ModelState.AddModelError("", "Пароль не містить жодної цифри");
+                return View(model);
+            }
+
+            if (!Regex.IsMatch(model.Password, @"[!@#$%]"))
+            {
+                ModelState.AddModelError("", "Пароль не містить жодного зі спецсимволів: ! @ # $ %");
+                return View(model);
+            }
+
+            if (!model.Password.Any(char.IsUpper))
+            {
+                ModelState.AddModelError("", "Пароль не містить жодної великої літери");
+                return View(model);
+            }
+
+            if (model.Password != passwordConfirmation)
+            {
+                ModelState.AddModelError("", "Паролі не співпадають");
+                return View(model);
+            }
+
             if (!ModelState.IsValid) return View(model);
 
             var exists = _context.Customers.Any(c => c.PhoneNumber == model.PhoneNumber || c.Email == model.Email && !string.IsNullOrEmpty(model.Email));
