@@ -7,7 +7,6 @@
     var fullName = session.GetString("FullName");
 }
 
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -35,10 +34,14 @@
         </section>
 
         <section class="buttonsBox">
-            <div class="buttonHeader">
-                <img src="/assets/cart.png" alt="cart">
-            </div>
-
+            @if (userId != null)
+            {
+                <a href="@Url.Action("Index", "Order")">
+                    <div class="buttonHeader">
+                        <img src="/assets/cart.png" alt="cart">
+                    </div>
+                </a>
+            }
             @if (userId != null)
             {
                 <a href="@Url.Action("Index", "UserProfile")">
@@ -55,6 +58,12 @@
                     </div>
                 </a>
             }
+            @*Профіль продавця, розкоментуйте це, а потім закоментуйте зверху елс і над ним іф*@
+            @* <a href="@Url.Action("Index", "SellerProfile")">
+                <div class="buttonHeader">
+                    <img src="/assets/profile.png" alt="profile">
+                </div>
+            </a> *@
         </section>
     </header>
     <div class="container">

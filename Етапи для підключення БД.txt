@@ -2,11 +2,12 @@
 1. Повинна бути скачений SQL Managment studio, Postgre
 2. Повинна бути створена пуста бд із назваю Prosto
 3. Змніть файл appseting.json (в полі Server name пропишіть своє Server name, яке в SQL Managment studio)
-4. Змніть файл appseting.json (поле провайдер відповідає за бд, яку ви хочете використати)
+4. Змніть файл appseting.json (поле провайдер відповідає за бд, яку ви хочете використати) та для постгре оновіть поле пароль
 5. В Nuget manager console пропишіть такі команди:
- а) якщо були якісь до цього міграції, то видаліть їх для уникнення конфліктів за допомогою команди:
+ a) встановіть дот нет: dotnet tool restore
+ б) якщо були якісь до цього міграції, то видаліть їх для уникнення конфліктів за допомогою команди:
     rm -r Migrations
- б) оберіть стоврення міграції для обраної бд:
+ в) оберіть стоврення міграції для обраної бд:
 ==================Postgre=====================
 dotnet ef migrations add InitialCreate_Postgres -c AppDbContext --output-dir Migrations/Postgres
 
@@ -15,7 +16,7 @@ dotnet ef migrations add InitialCreate_SqlServer -c AppDbContext --output-dir Mi
 
 ==================SqlLite=====================
 dotnet ef migrations add InitialCreate_Sqlite -c AppDbContext --output-dir Migrations/SQLite
- в) оновіть бд за допомогою команди:
-dotnet ef database update -c AppDbContext
+ г) оновіть бд за допомогою команди:
+ dotnet ef database update -c AppDbContext
 
 Готово =), за питаннями пишіть в тг

@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/cartStyles.css" asp-append-version="true" />
+}
+<main>
+    <section class="mainInfo">
+        <h2>Інформація про доставку</h2>
+
+        <section class="userList">
+            <div class="userInput">
+                <label for="firstName">Місто</label>
+                <input type="text" id="city">
+            </div>
+
+            <div class="userInput">
+                <label for="firstName">Адреса</label>
+                <input type="text" id="address">
+            </div>
+
+            <div class="userInput">
+                <label for="firstName">Віділення</label>
+                <input type="text" id="shop">
+            </div>
+
+            <div class="userInput">
+                <label for="firstName">Спосіб оплати</label>
+                <input type="text" id="pay">
+            </div>
+        </section>
+
+        <button class="saveButton">Зберегти</button>
+    </section>
+</main>
