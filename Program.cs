@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
 using Prosto.Models;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+using SQLitePCL;
 
 namespace Prosto;
 
@@ -10,9 +12,29 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        var config = builder.Configuration;
+        var dbProvider = config["Database:Provider"];
 
         builder.Services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        {
+            switch (dbProvider)
+            {
+                case "SqlServer":
+                    options.UseSqlServer(config.GetConnectionString("SqlServer"));
+                    break;
+                case "Postgres":
+                    options.UseNpgsql(config.GetConnectionString("Postgres"));
+                    break;
+                case "Sqlite":
+                    options.UseSqlite(config.GetConnectionString("Sqlite"));
+                    break;
+                case "InMemory":
+                    options.UseInMemoryDatabase("ProstoInMemory");
+                    break;
+                default:
+                    throw new Exception("Unknown database provider. Use 'SqlServer', 'Postgres' or 'Sqlite'.");
+            }
+        });
 
         builder.Services.AddSession();
         builder.Services.AddAuthentication(options =>

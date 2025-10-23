@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Prosto.Models;
 
@@ -14,6 +15,7 @@ public class Customer
     public string? FullName { get; set; }
 
     public string? Email { get; set; }
+
     public string? AuthProvider { get; set; } // Нове поле для типу аутентифікації
 
     public ICollection<CartItem>? CartItems { get; set; }

@@ -15,6 +15,7 @@ public class Item
     public string Name { get; set; }
 
     public string Description { get; set; }
+
     public string Category { get; set; }
 
     [Precision(18, 2)]
