@@ -1,11 +1,12 @@
-﻿@{
+﻿@model IEnumerable<Prosto.Models.Item>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/stylesCategory.css" asp-append-version="true" />
 }
 <main>
-    <h2>Смартфони</h2>
+    <h2>@ViewBag.CategoryName</h2>
     <section class="subMain">
         <aside>
             <h3>Фільтр</h3>
@@ -37,25 +38,25 @@
             </section>
         </aside>
         <section class="catalog">
-            @for (int i = 0; i < 3; i++)
+            @if (Model.Any())
             {
-                <section class="catalogLine">
-                    @for (int j = 0; j < 4; j++)
+                @* <section class="catalogLine"> *@
+                    @foreach (var item in Model)
                     {
-                        <a href="@Url.Action("Index", "Item")" class="item">
+                        <a href="@Url.Action("Index", "Item", new {id = item.ItemId})" class="item">
                             <section class="item">
                                 <img src="/assets/item/iphone.png" alt="itemImg">
 
-                                <p>Iphone 17 Pro 256GB Deep Blue</p>
+                                <p>@item.Name</p>
 
                                 <div class="buyBox">
-                                    <p>63 999 ₴</p>
+                                    <p>@item.Price ₴</p>
                                     <button>Купити</button>
                                 </div>
                             </section>
                         </a>
                     }
-                </section>
+                @* </section> *@
             }
         </section>
     </section>

@@ -64,21 +64,31 @@ aside h3 {
     color: black;
 }
 
-.catalog {
+/*.catalog {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+}*/
+
+.catalog { /* */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
 }
 
-.catalogLine {
+.catalog a { /* */
+    text-decoration: none
+}
+
+/*.catalogLine {
     display: flex;
     justify-content: space-between;
     gap: 8rem;
-}
+}*/
 
-.catalogLine a{
+/*.catalogLine a{
     text-decoration: none;
-}
+}*/
 
 .item {
     display: flex;

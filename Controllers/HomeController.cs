@@ -6,16 +6,20 @@ namespace Prosto.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string category)
         {
-            return View();
+            var items = string.IsNullOrEmpty(category)
+            ? _context.Items.Take(16).ToList()
+            : _context.Items.Where(i => i.Category == category).Take(16).ToList();
+
+            return View(items);
         }
 
         public IActionResult Contacts()
@@ -23,9 +27,15 @@ namespace Prosto.Controllers
             return View();
         }
 
-        public IActionResult Category()
+        public IActionResult Category(string category)
         {
-            return View();
+            var items = string.IsNullOrEmpty(category)
+            ? _context.Items.Take(30).ToList()
+            : _context.Items.Where(i => i.Category == category).Take(30).ToList();
+
+            ViewBag.CategoryName = category;
+
+            return View(items);
         }
     }
 }
