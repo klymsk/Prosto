@@ -1,35 +1,68 @@
-﻿@{
+﻿@model IEnumerable<Prosto.Models.CartItem>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/cartStyles.css" asp-append-version="true" />
 }
+@if (Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Назва</th>
+                <th>Кількість</th>
+                <th>Ціна</th>
+                <th>Сума</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@c.Item?.Name</td>
+                    <td>@c.Quantity</td>
+                    <td>@c.Item?.Price ₴</td>
+                    <td>@(c.Item?.Price * c.Quantity) ₴</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p><b>Всього:</b> @(Model.Sum(x => x.Item.Price * x.Quantity)) ₴</p>
+}
+else
+{
+    <p>Кошик порожній.</p>
+}
 <main>
     <section class="mainInfo">
         <h2>Інформація про доставку</h2>
 
-        <section class="userList">
-            <div class="userInput">
-                <label for="firstName">Місто</label>
-                <input type="text" id="city">
-            </div>
+        <form asp-action="SaveOrder" asp-controller="Order" method="post">
+            <section class="userList">
+                <div class="userInput">
+                    <label for="city">Місто</label>
+                    <input type="text" id="city" name="City" required>
+                </div>
 
-            <div class="userInput">
-                <label for="firstName">Адреса</label>
-                <input type="text" id="address">
-            </div>
+                <div class="userInput">
+                    <label for="address">Адреса</label>
+                    <input type="text" id="address" name="Address" required>
+                </div>
 
-            <div class="userInput">
-                <label for="firstName">Віділення</label>
-                <input type="text" id="shop">
-            </div>
+                <div class="userInput">
+                    <label for="shop">Відділення</label>
+                    <input type="text" id="shop" name="Branch" required>
+                </div>
 
-            <div class="userInput">
-                <label for="firstName">Спосіб оплати</label>
-                <input type="text" id="pay">
-            </div>
-        </section>
+                <div class="userInput">
+                    <label for="pay">Спосіб оплати</label>
+                    <input type="text" id="pay" name="Payment" required>
+                </div>
+            </section>
 
-        <button class="saveButton">Зберегти</button>
+            <button type="submit" class="saveButton">Зберегти</button>
+        </form>
     </section>
 </main>

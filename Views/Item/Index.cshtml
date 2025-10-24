@@ -13,8 +13,10 @@
             <h2>@Model.Name</h2>
 
             <div class="buyBox">
-                <p>@Model.Price ₴</p>
-                <button>Купити</button>
+                <a href="@Url.Action("AddToCart", "Order", new { itemId = Model.ItemId })" class="buyButton">
+                    <p>@Model.Price ₴</p>
+                    <button type="button">Купити</button>
+                </a>
             </div>
         </section>
     </article>
