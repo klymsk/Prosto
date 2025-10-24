@@ -70,6 +70,10 @@ article img {
     color: var(--blue-color);
 }
 
+.buyBox a { /**/
+    text-decoration: none
+}
+
 .buyBox button {
     display: flex;
     justify-content: center;
