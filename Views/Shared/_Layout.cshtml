@@ -26,7 +26,7 @@
         </a>
 
         <section class="searchBox">
-            <input placeholder="Пошук">
+            <input placeholder="Пошук" class="searchInput">
 
             <div class="buttonHeader">
                 <img src="/assets/search.png" alt="search">
@@ -69,6 +69,7 @@
     <div class="container">
         @RenderBody()
     </div>
+    <script src="~/js/search.js"></script>
     <footer>
         <div class="footerInfo">
             <a href="@Url.Action("Index", "Home")">Головна</a>
