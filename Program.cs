@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Prosto.Models;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using SQLitePCL;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace Prosto;
 
@@ -55,6 +57,13 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        //fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        builder.Services.AddApiVersioning(options =>
+        {
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.ReportApiVersions = true;
+        });
 
         var app = builder.Build();
 
