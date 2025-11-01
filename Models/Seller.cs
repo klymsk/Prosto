@@ -10,5 +10,5 @@ public class Seller
 
     public string SellerName { get; set; }
 
-    public ICollection<Item> Items { get; set; }
+    public ICollection<Item>? Items { get; set; }
 }

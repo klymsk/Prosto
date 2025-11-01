@@ -16,6 +16,6 @@ public class CartItem
 
     public int Quantity { get; set; }
 
-    public Customer Customer { get; set; }
-    public Item Item { get; set; }
+    public Customer? Customer { get; set; }
+    public Item? Item { get; set; }
 }

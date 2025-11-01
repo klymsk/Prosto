@@ -19,6 +19,6 @@ public class Order
 
     public string ShippingInfo { get; set; }
 
-    public Customer Customer { get; set; }
-    public ICollection<OrderItem> OrderItems { get; set; }
+    public Customer? Customer { get; set; }
+    public ICollection<OrderItem>? OrderItems { get; set; }
 }

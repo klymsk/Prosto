@@ -21,7 +21,7 @@ public class Item
     [Precision(18, 2)]
     public decimal Price { get; set; }
 
-    public Seller Seller { get; set; }
-    public ICollection<CartItem> CartItems { get; set; }
-    public ICollection<OrderItem> OrderItems { get; set; }
+    public Seller? Seller { get; set; }
+    public ICollection<CartItem>? CartItems { get; set; }
+    public ICollection<OrderItem>? OrderItems { get; set; }
 }

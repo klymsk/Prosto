@@ -20,6 +20,6 @@ public class OrderItem
     [Precision(18, 2)]
     public decimal Price { get; set; }
 
-    public Order Order { get; set; }
-    public Item Item { get; set; }
+    public Order? Order { get; set; }
+    public Item? Item { get; set; }
 }

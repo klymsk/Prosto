@@ -16,6 +16,7 @@ public class UserProfileController : ControllerBase
         _context = context;
     }
 
+    // GET: api/v1/userprofile
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Customer>>> Get()
     {
