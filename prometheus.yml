@@ -1,0 +1,22 @@
+﻿# my global config
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+rule_files: []
+
+scrape_configs:
+  - job_name: "prosto"
+    scheme: https
+    tls_config:
+     insecure_skip_verify: true
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["host.docker.internal:7049"]
+        labels:
+          app: "prosto"
