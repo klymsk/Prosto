@@ -1,0 +1,1 @@
+KR5D:\course3\–ö–ü–ü\Prosto\TestProsto\TestProsto.csproj¢net8.0ÚCSharp12

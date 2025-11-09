@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Вхід";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/authorizationStyles.css" asp-append-version="true" />
+}
+<main>
+    <article>
+        <h2>Вхід користувача</h2>
+
+        <form action="@Url.Action("Login", "UserProfile")" method="post">
+            <div class="userInput">
+                <label for="phoneNumber">Номер телефону</label>
+                <input name="phoneNumber" placeholder="+380" id="phoneNumber" type="tel" required />
+            </div>
+            <div class="userInput">
+                <label for="password">Пароль</label>
+                <input name="password" type="password" placeholder="***" id="password" required />
+            </div>
+            <button type="submit" id="submitButton">Увійти</button>
+        </form>
+        <hr>
+        <p>Або</p>
+        <a href="@Url.Action("LoginWithGoogle", "UserProfile")" class="google-btn">
+            <img src="~/assets/google.png" alt="google icon"> Увійти з Google
+        </a>
+        <p>Не маєте акаунту? <a href="@Url.Action("Register", "UserProfile")">Реєстрація</a></p>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="text-danger">@Html.ValidationSummary()</div>
+        }
+    </article>
+</main>

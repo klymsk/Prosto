@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var picture = Context.Session.GetString("Picture") ?? "/assets/user.png";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/profileSaleStyles.css" asp-append-version="true" />
+}
+<main>
+    <article>
+        <section class="mainInfo">
+            <h2>Юридична особа</h2>
+
+            <section class="userList">
+                <div class="userInput">
+                    <label for="compName">Назва компанії</label>
+                    <input type="text" id="compName">
+                </div>
+
+                <div class="userInput">
+                    <label for="edrpou">ЄДРПОУ</label>
+                    <input type="text" id="edrpou">
+                </div>
+
+                <div class="userInput">
+                    <label for="iban">IBAN</label>
+                    <input type="text" id="iban">
+                </div>
+
+                <div class="userInput">
+                    <label for="type">Тип компанії</label>
+                    <input type="text" id="type">
+                </div>
+            </section>
+
+            <button class="saveButton">Зберегти</button>
+        </section>
+
+        <section class="mainInfo">
+            <h2>Узагальнена інформація</h2>
+
+            <section class="saleInfo">
+                <section class="additionalList">
+                    <div class="userInput">
+                        <label for="category">Категорія зайнятості</label>
+                        <input type="text" id="category">
+                    </div>
+
+                    <div class="userInput">
+                        <label for="saleAddress">Юридична адреса</label>
+                        <input type="text" id="saleAddress">
+                    </div>
+
+                    <div class="userInput">
+                        <label for="saleFactory">Адреса потужностей</label>
+                        <input type="text" id="saleFactory">
+                    </div>
+                </section>
+
+                <div class="saleDescription">
+                    <label for="description">Короткий опис</label>
+                    <textarea id="description"></textarea>
+                </div>
+            </section>
+
+            <button class="saveButton">Зберегти</button>
+        </section>
+    </article>
+
+    <aside>
+        <p>Додати новий товар</p>
+        <p>Тех підтримка</p>
+        <p>Контакти</p>
+        <p>Вихід</p>
+    </aside>
+</main>

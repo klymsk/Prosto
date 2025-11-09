@@ -1,0 +1,1 @@
+CR-D:\course3\–ö–ü–ü\Prosto\Prosto\Prosto.csproj¢net8.0ÚCSharp12

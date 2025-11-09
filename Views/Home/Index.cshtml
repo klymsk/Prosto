@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Prosto.Models.Item>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/homeStyles.css" asp-append-version="true" />
+}
+<nav>
+    <a href="@Url.Action("Category", "Home", new { category = "Смартфони" })">
+        <div class="category">
+            <img src="assets/nav/smartphone.png" alt="smartphone">
+            <p>Смартфони</p>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Category", "Home", new { category = "Ноутбуки" })">
+        <div class="category">
+            <img src="assets/nav/laptop.png" alt="laptop">
+            <p>Ноутбуки</p>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Category", "Home", new { category = "Автотовари" })">
+        <div class="category">
+            <img src="assets/nav/auto.png" alt="auto">
+            <p>Авто</p>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Category", "Home", new { category = "Товари для офісу" })">
+        <div class="category">
+            <img src="assets/nav/office.png" alt="office">
+            <p>Офіс</p>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Category", "Home", new { category = "Спорт і відпочинок" })">
+        <div class="category">
+            <img src="assets/nav/sport.png" alt="sport">
+            <p>Спорт</p>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Category", "Home", new { category = "Одяг та взуття" })">
+        <div class="category">
+            <img src="assets/nav/cloth.png" alt="cloth">
+            <p>Одяг</p>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Category", "Home", new { category = "Зоотовари" })">
+        <div class="category">
+            <img src="assets/nav/zoo.png" alt="zoo">
+            <p>Зоотовари</p>
+        </div>
+    </a>
+</nav>
+
+<main>
+    <article>
+        <h2>Promo</h2>
+        <h2>-30%</h2>
+    </article>
+
+    <section class="catalog">
+        @if (Model.Any())
+        {
+            @* <section class="catalogLine"> *@
+                @foreach (var item in Model)
+                {
+                    <a href="@Url.Action("Index", "Item", new {id = item.ItemId})" class="item">
+                        <section class="item">
+                            @*АНОМАЛІЯ*@
+                            <img src="assets/item/iphonee.png" alt="itemImg">
+
+                            <p>@item.Name</p>
+
+                            <div class="buyBox">
+                                <p>@item.Price ₴</p>
+                                <button>Купити</button>
+                            </div>
+                        </section>
+                    </a>
+                }
+            @* </section> *@
+        }
+    </section>
+</main>

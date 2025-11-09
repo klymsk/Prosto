@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Prosto.Models.Item>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/stylesCategory.css" asp-append-version="true" />
+}
+<main>
+    <h2>@ViewBag.CategoryName</h2>
+    <section class="subMain">
+        <aside>
+            <h3>Фільтр</h3>
+            <section class= "filterLine">
+                @for (int i = 0; i < 4; i++)
+                {
+                    <section class="filterOption">
+                        <p>Виробник</p>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="apple" name="manufacturer" value="Apple">
+                            <label for="apple">Apple</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="samsung" name="manufacturer" value="Samsung">
+                            <label for="samsung">Samsung</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="xiaomi" name="manufacturer" value="Xiaomi">
+                            <label for="xiaomi">Xiaomi</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="google" name="manufacturer" value="Google">
+                            <label for="google">Google</label>
+                        </div>
+                    </section>
+
+                }
+            </section>
+        </aside>
+        <section class="catalog">
+            @if (Model.Any())
+            {
+                @* <section class="catalogLine"> *@
+                    @foreach (var item in Model)
+                    {
+                        <a href="@Url.Action("Index", "Item", new {id = item.ItemId})" class="item">
+                            <section class="item">
+                                @*АНОМАЛІЯ*@
+                                <img src="/assets/item/iphonee.png" alt="itemImg">
+
+                                <p>@item.Name</p>
+
+                                <div class="buyBox">
+                                    <p>@item.Price ₴</p>
+                                    <button>Купити</button>
+                                </div>
+                            </section>
+                        </a>
+                    }
+                @* </section> *@
+            }
+        </section>
+    </section>
+</main>

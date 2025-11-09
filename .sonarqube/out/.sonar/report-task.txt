@@ -1,0 +1,6 @@
+projectKey=Prosto
+serverUrl=http://localhost:9000
+serverVersion=25.11.0.114957
+dashboardUrl=http://localhost:9000/dashboard?id=Prosto
+ceTaskId=9d598784-6019-4ab9-bf6f-9fe67cfc11fc
+ceTaskUrl=http://localhost:9000/api/ce/task?id=9d598784-6019-4ab9-bf6f-9fe67cfc11fc

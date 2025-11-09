@@ -1,0 +1,132 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--beige-color);
+    border-radius: 20px;
+    font-family: var(--font-family);
+    padding: 3rem 5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 30rem;
+}
+
+h2 {
+    font-family: var(--font-family);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--white-color);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.userInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userInput label {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+}
+
+input {
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--gray-color);
+    color: black;
+    width: 100%;
+}
+
+#submitButton {
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--gray-color);
+}
+
+.google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red-color);
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white-color);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.google-btn img {
+    width: 30px;
+}
+
+.text-danger {
+    color: var(--red-color);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+}
+
+a {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blue-color);
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}

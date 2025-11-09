@@ -1,0 +1,56 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem 8rem;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--beige-color);
+    border-radius: 20px;
+    font-family: var(--font-family);
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    height: 40rem;
+    padding: 2rem 3rem;
+}
+
+.mainInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 10rem;
+}
+
+.contactsInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contactsInfo h2 {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--blue-color);
+}
+
+.contactsInfo p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+    line-height: 2rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--beige-color);
+    height: 10rem;
+    font-family: var(--font-family);
+    padding: 3rem 2rem;
+}

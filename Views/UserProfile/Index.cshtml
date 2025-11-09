@@ -1,0 +1,48 @@
+﻿@model Prosto.Models.Customer
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var picture = Context.Session.GetString("Picture") ?? "/assets/user.png";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/profileStyles.css" asp-append-version="true" />
+}
+<main>
+    <aside>
+        <p>Особиста інформація</p>
+        <p>Історія замовлень</p>
+        <p>Кількість записів у таблиці Orders: <strong>@ViewBag.ProductCount</strong></p>
+    </aside>
+    <article>
+        <h2>Особиста інформація</h2>
+
+        <section class="userInfo">
+            <img src="~/assets/user.png" alt="userImg">
+
+            <section class="userList">
+                <div class="userInput">
+                    <label for="fullName">Ім’я</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="fullName" value="@Model.FullName" readonly>
+                        <span class="edit-icon">✏️</span>
+                    </div>
+                </div>
+
+                <div class="userInput">
+                    <label for="phone">Номер телефону</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="phone" value="@Model.PhoneNumber" readonly>
+                        <span class="edit-icon">✏️</span>
+                    </div>
+                </div>
+
+                <div class="userInput">
+                    <label for="email">Електронна пошта</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" value="@Model.Email" readonly>
+                        <span class="edit-icon">✏️</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+</main>

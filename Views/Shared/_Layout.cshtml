@@ -1,0 +1,89 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var session = HttpContextAccessor.HttpContext.Session;
+    var userId = session.GetInt32("UserId");
+    var fullName = session.GetString("FullName");
+}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosto</title>
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="@Url.Action("Index", "Home")">
+            <h1>Prosto</h1>
+        </a>
+
+        <section class="searchBox">
+            <input placeholder="Пошук" class="searchInput">
+
+            <div class="buttonHeader">
+                <img src="/assets/search.png" alt="search">
+            </div>
+        </section>
+
+        <section class="buttonsBox">
+            @if (userId != null)
+            {
+                <a href="@Url.Action("Index", "Order")">
+                    <div class="buttonHeader">
+                        <img src="/assets/cart.png" alt="cart">
+                    </div>
+                </a>
+            }
+            @if (userId != null)
+            {
+                <a href="@Url.Action("Index", "UserProfile")">
+                    <div class="buttonHeader">
+                        <img src="/assets/profile.png" alt="profile">
+                    </div>
+                </a>
+            }
+            else
+            {
+                <a href="@Url.Action("Login", "UserProfile")">
+                    <div class="buttonHeader">
+                        <img src="/assets/profile.png" alt="profile">
+                    </div>
+                </a>
+            }
+            @*Профіль продавця, розкоментуйте це, а потім закоментуйте зверху елс і над ним іф*@
+            @* <a href="@Url.Action("Index", "SellerProfile")">
+                <div class="buttonHeader">
+                    <img src="/assets/profile.png" alt="profile">
+                </div>
+            </a> *@
+        </section>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/js/search.js"></script>
+    <footer>
+        <div class="footerInfo">
+            <a href="@Url.Action("Index", "Home")">Головна</a>
+            <a href="@Url.Action("Contacts", "Home")" class="category">Контакти</a>
+            <a href="@Url.Action("Index", "UserProfile")">Профіль</a>
+        </div>
+
+        <h3>Prosto</h3>
+
+        <div class="footerInfo">
+            <p>095 345 67 89</p>
+            <p>example@gmail.com</p>
+            <p>м . Київ, вул. Володимирська 7</p>
+        </div>
+    </footer>
+</body>
+</html>

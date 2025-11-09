@@ -1,0 +1,116 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray-color);
+    padding: 1rem 2rem;
+    height: 6rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 100;
+    color: black;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem 8rem;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--beige-color);
+    border-radius: 20px;
+    font-family: var(--font-family);
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    height: 30rem;
+    padding: 2rem 3rem;
+}
+
+/*.catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}*/
+
+.catalog { /* */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.catalog a { /* */
+    text-decoration: none
+}
+
+/*.catalogLine {
+    display: flex;
+    justify-content: space-between;
+}*/
+
+/*.catalogLine a{
+    text-decoration: none;
+}*/
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    font-family: var(--font-family);
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    width: 20rem;
+    height: 30rem;
+    cursor: pointer;
+}
+
+.item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.buyBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.buyBox p {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--blue-color);
+}
+
+.buyBox button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 0rem;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white-color);
+    cursor: pointer;
+}
