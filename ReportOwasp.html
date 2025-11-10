@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>report</title>
+<link
+	href="report/normalize/normalize.css" rel="stylesheet">
+<link
+	href="report/themes/original/main.css" rel="stylesheet">
+<link
+	href="report/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="report/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Fri 7 Nov 2025, at 20:09:42</span>
+		</p>
+		<p>ZAP Version: 2.16.1</p>
+		<p>
+			ZAP by <a href="https://checkmarx.com/">Checkmarx</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About This Report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report Parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert Counts by Risk and Confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert Counts by Site and Risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert Counts by Alert Type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(2)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert Types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About This Report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report Parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://host.docker.internal:5297</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert Counts by Risk and Confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(50.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(33.3%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(33.3%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(16.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(50.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(33.3%)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert Counts by Site and Risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://host.docker.internal:5297</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(3)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(5)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert Counts by Alert Type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">Absence of Anti-CSRF Tokens</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(66.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>8</span><br> <span
+								class="additional-info-percentages">(133.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>8</span><br> <span
+								class="additional-info-percentages">(133.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Cookie with SameSite Attribute None</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>26</span><br> <span
+								class="additional-info-percentages">(433.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">User Controllable HTML Element Attribute (Potential XSS)</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>8</span><br> <span
+								class="additional-info-percentages">(133.3%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>6</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://host.docker.internal:5297</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://host.docker.internal:5297/Item</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (299 bytes)</summary>
+				
+				<pre><code>GET http://host.docker.internal:5297/Item HTTP/1.1
+host: host.docker.internal:5297
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://host.docker.internal:5297/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (135 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Date: Fri, 07 Nov 2025 20:07:24 GMT
+Server: Kestrel
+content-length: 5363
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (5363 bytes)</summary>
+				
+				<pre><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Prosto&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/styles.css?v=gpp_VaeXtX13865DmBmksEI7xOdoJAGgfXE7Tk8LXxk&quot; /&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylesItem.css?v=lX_-yE1ugZ8OAmd7Ws_39ZRhv_OeFcLz3zhHkLCnw0s&quot; /&gt;
+
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header b-v2k56ncyer&gt;
+        &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;
+            &lt;h1 b-v2k56ncyer&gt;Prosto&lt;/h1&gt;
+        &lt;/a&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;searchBox&quot;&gt;
+            &lt;input b-v2k56ncyer placeholder=&quot;Пошук&quot;&gt;
+
+            &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                &lt;img b-v2k56ncyer src=&quot;/assets/search.png&quot; alt=&quot;search&quot;&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;buttonsBox&quot;&gt;
+                &lt;a b-v2k56ncyer href=&quot;/UserProfile/Login&quot;&gt;
+                    &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                        &lt;img b-v2k56ncyer src=&quot;/assets/profile.png&quot; alt=&quot;profile&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+        &lt;/section&gt;
+    &lt;/header&gt;
+    &lt;div b-v2k56ncyer class=&quot;container&quot;&gt;
+        &lt;main&gt;
+    &lt;article&gt;
+        &lt;img src=&quot;assets/item/iphoneItem.png&quot; alt=&quot;item&quot;&gt;
+
+        &lt;section class=&quot;itemInfo&quot;&gt;
+            &lt;h2&gt;Iphone 17 Pro 256GB Deep Blue&lt;/h2&gt;
+
+            &lt;div class=&quot;buyBox&quot;&gt;
+                &lt;p&gt;63 999 ₴&lt;/p&gt;
+                &lt;button&gt;Купити&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/article&gt;
+
+    &lt;section class=&quot;subMain&quot;&gt;
+        &lt;section class=&quot;descriptionItem&quot;&gt;
+            &lt;div class=&quot;mainInfo&quot;&gt;
+                &lt;h3&gt;Опис товару&lt;/h3&gt;
+
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;techInfo&quot;&gt;
+                &lt;h3&gt;Характеристики&lt;/h3&gt;
+
+                &lt;div class=&quot;techDetail&quot;&gt;
+                    &lt;p&gt;Дисплей&lt;/p&gt;
+                    &lt;p&gt;6.3&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;techDetail&quot;&gt;
+                    &lt;p&gt;Обсяг пам`яті&lt;/p&gt;
+                    &lt;p&gt;256GB&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;techDetail&quot;&gt;
+                    &lt;p&gt;Камера&lt;/p&gt;
+                    &lt;p&gt;144 МП&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;reviewsItem&quot;&gt;
+                &lt;div class=&quot;review&quot;&gt;
+                    &lt;div class=&quot;user&quot;&gt;
+                        &lt;p&gt;Name&lt;/p&gt;
+                        &lt;p&gt;04.10.2025&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;review&quot;&gt;
+                    &lt;div class=&quot;user&quot;&gt;
+                        &lt;p&gt;Name&lt;/p&gt;
+                        &lt;p&gt;04.10.2025&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;review&quot;&gt;
+                    &lt;div class=&quot;user&quot;&gt;
+                        &lt;p&gt;Name&lt;/p&gt;
+                        &lt;p&gt;04.10.2025&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+                &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+    &lt;/div&gt;
+    &lt;footer b-v2k56ncyer&gt;
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;Головна&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/Home/Contacts&quot; class=&quot;category&quot;&gt;Контакти&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/UserProfile&quot;&gt;Профіль&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;h3 b-v2k56ncyer&gt;Prosto&lt;/h3&gt;
+
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;p b-v2k56ncyer&gt;095 345 67 89&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;example@gmail.com&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;м . Київ, вул. Володимирська 7&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://host.docker.internal:5297</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://host.docker.internal:5297/Home/Category</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021</a></span> 
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not protect against &#39;ClickJacking&#39; attacks. It should include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (308 bytes)</summary>
+				
+				<pre><code>GET http://host.docker.internal:5297/Home/Category HTTP/1.1
+host: host.docker.internal:5297
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://host.docker.internal:5297/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (136 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Date: Fri, 07 Nov 2025 20:07:24 GMT
+Server: Kestrel
+content-length: 13728
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (13728 bytes)</summary>
+				
+				<pre><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Prosto&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/styles.css?v=gpp_VaeXtX13865DmBmksEI7xOdoJAGgfXE7Tk8LXxk&quot; /&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylesCategory.css?v=wyOWaILvS79KFf1WWpdYrkz7EmjRCRaSWlGnEeo3cpY&quot; /&gt;
+
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header b-v2k56ncyer&gt;
+        &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;
+            &lt;h1 b-v2k56ncyer&gt;Prosto&lt;/h1&gt;
+        &lt;/a&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;searchBox&quot;&gt;
+            &lt;input b-v2k56ncyer placeholder=&quot;Пошук&quot;&gt;
+
+            &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                &lt;img b-v2k56ncyer src=&quot;/assets/search.png&quot; alt=&quot;search&quot;&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;buttonsBox&quot;&gt;
+                &lt;a b-v2k56ncyer href=&quot;/UserProfile/Login&quot;&gt;
+                    &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                        &lt;img b-v2k56ncyer src=&quot;/assets/profile.png&quot; alt=&quot;profile&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+        &lt;/section&gt;
+    &lt;/header&gt;
+    &lt;div b-v2k56ncyer class=&quot;container&quot;&gt;
+        &lt;main&gt;
+    &lt;h2&gt;Смартфони&lt;/h2&gt;
+    &lt;section class=&quot;subMain&quot;&gt;
+        &lt;aside&gt;
+            &lt;h3&gt;Фільтр&lt;/h3&gt;
+            &lt;section class= &quot;filterLine&quot;&gt;
+                    &lt;section class=&quot;filterOption&quot;&gt;
+                        &lt;p&gt;Виробник&lt;/p&gt;
+
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;apple&quot; name=&quot;manufacturer&quot; value=&quot;Apple&quot;&gt;
+                            &lt;label for=&quot;apple&quot;&gt;Apple&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;samsung&quot; name=&quot;manufacturer&quot; value=&quot;Samsung&quot;&gt;
+                            &lt;label for=&quot;samsung&quot;&gt;Samsung&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;xiaomi&quot; name=&quot;manufacturer&quot; value=&quot;Xiaomi&quot;&gt;
+                            &lt;label for=&quot;xiaomi&quot;&gt;Xiaomi&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;google&quot; name=&quot;manufacturer&quot; value=&quot;Google&quot;&gt;
+                            &lt;label for=&quot;google&quot;&gt;Google&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                    &lt;section class=&quot;filterOption&quot;&gt;
+                        &lt;p&gt;Виробник&lt;/p&gt;
+
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;apple&quot; name=&quot;manufacturer&quot; value=&quot;Apple&quot;&gt;
+                            &lt;label for=&quot;apple&quot;&gt;Apple&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;samsung&quot; name=&quot;manufacturer&quot; value=&quot;Samsung&quot;&gt;
+                            &lt;label for=&quot;samsung&quot;&gt;Samsung&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;xiaomi&quot; name=&quot;manufacturer&quot; value=&quot;Xiaomi&quot;&gt;
+                            &lt;label for=&quot;xiaomi&quot;&gt;Xiaomi&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;google&quot; name=&quot;manufacturer&quot; value=&quot;Google&quot;&gt;
+                            &lt;label for=&quot;google&quot;&gt;Google&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                    &lt;section class=&quot;filterOption&quot;&gt;
+                        &lt;p&gt;Виробник&lt;/p&gt;
+
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;apple&quot; name=&quot;manufacturer&quot; value=&quot;Apple&quot;&gt;
+                            &lt;label for=&quot;apple&quot;&gt;Apple&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;samsung&quot; name=&quot;manufacturer&quot; value=&quot;Samsung&quot;&gt;
+                            &lt;label for=&quot;samsung&quot;&gt;Samsung&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;xiaomi&quot; name=&quot;manufacturer&quot; value=&quot;Xiaomi&quot;&gt;
+                            &lt;label for=&quot;xiaomi&quot;&gt;Xiaomi&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;google&quot; name=&quot;manufacturer&quot; value=&quot;Google&quot;&gt;
+                            &lt;label for=&quot;google&quot;&gt;Google&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                    &lt;section class=&quot;filterOption&quot;&gt;
+                        &lt;p&gt;Виробник&lt;/p&gt;
+
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;apple&quot; name=&quot;manufacturer&quot; value=&quot;Apple&quot;&gt;
+                            &lt;label for=&quot;apple&quot;&gt;Apple&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;samsung&quot; name=&quot;manufacturer&quot; value=&quot;Samsung&quot;&gt;
+                            &lt;label for=&quot;samsung&quot;&gt;Samsung&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;xiaomi&quot; name=&quot;manufacturer&quot; value=&quot;Xiaomi&quot;&gt;
+                            &lt;label for=&quot;xiaomi&quot;&gt;Xiaomi&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;checkbox-item&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; id=&quot;google&quot; name=&quot;manufacturer&quot; value=&quot;Google&quot;&gt;
+                            &lt;label for=&quot;google&quot;&gt;Google&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+            &lt;/section&gt;
+        &lt;/aside&gt;
+        &lt;section class=&quot;catalog&quot;&gt;
+                &lt;section class=&quot;catalogLine&quot;&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                &lt;/section&gt;
+                &lt;section class=&quot;catalogLine&quot;&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                &lt;/section&gt;
+                &lt;section class=&quot;catalogLine&quot;&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;/Item&quot; class=&quot;item&quot;&gt;
+                            &lt;section class=&quot;item&quot;&gt;
+                                &lt;img src=&quot;/assets/item/iphone.png&quot; alt=&quot;itemImg&quot;&gt;
+
+                                &lt;p&gt;Iphone 17 Pro 256GB Deep Blue&lt;/p&gt;
+
+                                &lt;div class=&quot;buyBox&quot;&gt;
+                                    &lt;p&gt;63 999 ₴&lt;/p&gt;
+                                    &lt;button&gt;Купити&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/a&gt;
+                &lt;/section&gt;
+        &lt;/section&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+    &lt;/div&gt;
+    &lt;footer b-v2k56ncyer&gt;
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;Головна&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/Home/Contacts&quot; class=&quot;category&quot;&gt;Контакти&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/UserProfile&quot;&gt;Профіль&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;h3 b-v2k56ncyer&gt;Prosto&lt;/h3&gt;
+
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;p b-v2k56ncyer&gt;095 345 67 89&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;example@gmail.com&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;м . Київ, вул. Володимирська 7&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://host.docker.internal:5297</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">Absence of Anti-CSRF Tokens</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://host.docker.internal:5297/UserProfile/Register</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/05-Testing_for_Cross_Site_Request_Forgery">WSTG-v42-SESS-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/352.html">CWE-352</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>No Anti-CSRF tokens were found in a HTML submission form.</p>
+
+<p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p>
+
+<p>CSRF attacks are effective in a number of situations, including:</p>
+
+<p>    * The victim has an active session on the target site.</p>
+
+<p>    * The victim is authenticated via HTTP auth on the target site.</p>
+
+<p>    * The victim is on the same local network as the target site.</p>
+
+<p>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: &quot;email&quot; &quot;fullName&quot; &quot;password&quot; &quot;passwordConfirmation&quot; &quot;phoneNumber&quot; ].</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (332 bytes)</summary>
+				
+				<pre><code>GET http://host.docker.internal:5297/UserProfile/Register HTTP/1.1
+host: host.docker.internal:5297
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://host.docker.internal:5297/UserProfile/Login
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (135 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Date: Fri, 07 Nov 2025 20:07:24 GMT
+Server: Kestrel
+content-length: 3980
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3980 bytes)</summary>
+				
+				<pre><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Prosto&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/styles.css?v=gpp_VaeXtX13865DmBmksEI7xOdoJAGgfXE7Tk8LXxk&quot; /&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/authorizationStyles.css?v=q89W69TZWV5rd_bidZs93KYcRImi9K9gnoyWIXUWAhY&quot; /&gt;
+
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header b-v2k56ncyer&gt;
+        &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;
+            &lt;h1 b-v2k56ncyer&gt;Prosto&lt;/h1&gt;
+        &lt;/a&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;searchBox&quot;&gt;
+            &lt;input b-v2k56ncyer placeholder=&quot;Пошук&quot;&gt;
+
+            &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                &lt;img b-v2k56ncyer src=&quot;/assets/search.png&quot; alt=&quot;search&quot;&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;buttonsBox&quot;&gt;
+                &lt;a b-v2k56ncyer href=&quot;/UserProfile/Login&quot;&gt;
+                    &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                        &lt;img b-v2k56ncyer src=&quot;/assets/profile.png&quot; alt=&quot;profile&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+        &lt;/section&gt;
+    &lt;/header&gt;
+    &lt;div b-v2k56ncyer class=&quot;container&quot;&gt;
+        &lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Реєстрація користувача&lt;/h2&gt;
+
+        &lt;form action=&quot;/UserProfile/Register&quot; method=&quot;post&quot;&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;fullName&quot;&gt;ПІБ&lt;/label&gt;
+                &lt;input placeholder=&quot;Іван Іванов&quot; id=&quot;fullName&quot; maxlength=&quot;500&quot; required type=&quot;text&quot; name=&quot;FullName&quot; value=&quot;&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;email&quot;&gt;Електронна пошта&lt;/label&gt;
+                &lt;input placeholder=&quot;example@gmail.com&quot; id=&quot;email&quot; type=&quot;email&quot; required name=&quot;Email&quot; value=&quot;&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;phoneNumber&quot;&gt;Номер телефону&lt;/label&gt;
+                &lt;input placeholder=&quot;+380&quot; id=&quot;phoneNumber&quot; type=&quot;tel&quot; pattern=&quot;\+380[0-9]{9}&quot; maxlength=&quot;13&quot; required name=&quot;PhoneNumber&quot; value=&quot;&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;password&quot;&gt;Пароль&lt;/label&gt;
+                &lt;input type=&quot;password&quot; placeholder=&quot;***&quot; id=&quot;password&quot; minlength=&quot;8&quot; maxlength=&quot;16&quot; required name=&quot;Password&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;passwordConfirmation&quot;&gt;Підтвердження паролю&lt;/label&gt;
+                &lt;input type=&quot;password&quot; placeholder=&quot;***&quot; name=&quot;PasswordConfirmation&quot; id=&quot;passwordConfirmation&quot; minlength=&quot;8&quot; maxlength=&quot;16&quot; required /&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot; id=&quot;submitButton&quot;&gt;Зареєструватися&lt;/button&gt;
+        &lt;/form&gt;
+        &lt;hr&gt;
+        &lt;p&gt;Уже є акаунт? &lt;a href=&quot;/UserProfile/Login&quot;&gt;Вхід&lt;/a&gt;&lt;/p&gt;
+        &lt;a href=&quot;/UserProfile/LoginWithGoogle&quot; class=&quot;google-btn&quot;&gt;
+            &lt;img src=&quot;/assets/google.png&quot; alt=&quot;google icon&quot;&gt; Увійти з Google
+        &lt;/a&gt;
+
+    &lt;/article&gt;
+&lt;/main&gt;
+    &lt;/div&gt;
+    &lt;footer b-v2k56ncyer&gt;
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;Головна&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/Home/Contacts&quot; class=&quot;category&quot;&gt;Контакти&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/UserProfile&quot;&gt;Профіль&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;h3 b-v2k56ncyer&gt;Prosto&lt;/h3&gt;
+
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;p b-v2k56ncyer&gt;095 345 67 89&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;example@gmail.com&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;м . Київ, вул. Володимирська 7&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;form action=&quot;/UserProfile/Register&quot; method=&quot;post&quot;&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Phase: Architecture and Design</p>
+
+<p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p>
+
+<p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p>
+
+<p>Phase: Implementation</p>
+
+<p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p>
+
+<p>Phase: Architecture and Design</p>
+
+<p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p>
+
+<p>Note that this can be bypassed using XSS.</p>
+
+<p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p>
+
+<p>Note that this can be bypassed using XSS.</p>
+
+<p>Use the ESAPI Session Management control.</p>
+
+<p>This control includes a component for CSRF.</p>
+
+<p>Do not use the GET method for any request that triggers a state change.</p>
+
+<p>Phase: Implementation</p>
+
+<p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://host.docker.internal:5297</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Cookie with SameSite Attribute None</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://host.docker.internal:5297/UserProfile/LoginWithGoogle</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1275.html">CWE-1275</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set with its SameSite attribute set to &quot;none&quot;, which means that the cookie can be sent as a result of a &#39;cross-site&#39; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (339 bytes)</summary>
+				
+				<pre><code>GET http://host.docker.internal:5297/UserProfile/LoginWithGoogle HTTP/1.1
+host: host.docker.internal:5297
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://host.docker.internal:5297/UserProfile/Login
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (949 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 302 Found
+Content-Length: 0
+Date: Fri, 07 Nov 2025 20:07:24 GMT
+Server: Kestrel
+Location: https://accounts.google.com/o/oauth2/v2/auth?client_id=333524670527-ov4q4npr3i4gmm2t5mqomcgn84ukd4mu.apps.googleusercontent.com&amp;scope=openid%20profile%20email&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fhost.docker.internal%3A5297%2Fsignin-google&amp;code_challenge=oP2o8VSp3sZyzyho7z2CKago7rlMDqZhu-iV-JkZZOg&amp;code_challenge_method=S256&amp;state=CfDJ8IqG0VxqcpVFuXqWUdqEvzHqfmP5mSNyHNY12AmtBXq66jmx69Z1fNZUai_8f_U2Zi38odYf3PzX3h9ymHwrq12Obc9AiRIfk-MXdkKivqoxAkZVq9lRPU3GYth4MnjQnh-iGy9U1ypurfGwJ2ruTLF5kbj0DUnvFGQq_xHeAsgpjAIB1J6DpSpp6f82c3QZgk2G8IVX7oZ-033js_3w496BWxEjK1QIT0MVwW4H2xblUSPH-yV6lI8VXv_tYiMM_LGpne6wQckgKNY9fYPr4tEdqCNW1yhPtSka0IBJ9IjtwKxnYLR_eHV7bEISlWmh3Q
+Set-Cookie: .AspNetCore.Correlation.GzhcPQDe_dJZLMZ8Y4Q2RvbWP9c3-TI73gP26CmAVcY=N; expires=Fri, 07 Nov 2025 20:22:24 GMT; path=/signin-google; secure; samesite=none; httponly
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>.AspNetCore.Correlation.GzhcPQDe_dJZLMZ8Y4Q2RvbWP9c3-TI73gP26CmAVcY</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: .AspNetCore.Correlation.GzhcPQDe_dJZLMZ8Y4Q2RvbWP9c3-TI73gP26CmAVcY</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the SameSite attribute is set to either &#39;lax&#39; or ideally &#39;strict&#39; for all cookies.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://host.docker.internal:5297/assets/search.png</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (325 bytes)</summary>
+				
+				<pre><code>GET http://host.docker.internal:5297/assets/search.png HTTP/1.1
+host: host.docker.internal:5297
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://host.docker.internal:5297/Home/Category
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (212 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Length: 687
+Content-Type: image/png
+Date: Fri, 07 Nov 2025 20:07:24 GMT
+Server: Kestrel
+Accept-Ranges: bytes
+ETag: &quot;1dc444e97408e2f&quot;
+Last-Modified: Thu, 23 Oct 2025 18:55:25 GMT
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (687 bytes)</summary>
+				
+				<pre><code>PNG
+
+   IHDR         ;0®¢   	pHYs        sRGB ®Îé   gAMA  ±üa  DIDATxÍV;K\Aþt×`!Ä@!©CB%l|`o)ZÚú´óØZ[ø ÁÆJñU¨ÛøÖBëëösîîÌÜàwvfÎùÎ93ÀFUÆñh£jâ°ØLl ¾%ÓÄu#Þ ªÄ	£¸ªHâ±W:ÕÒu®E)Îø&amp;±VoÅá±øÒ[Cl$.Ê¼ù~Tea5äÈôuÉü[ás®Ú8MÝP9äåÛ Ä¥Ï+ÎÂïèô× &amp;¸~åã_ -FÑÄo³ò=ñ±j¸-ãÈ&gt;ØÍö
+MV»;,ò	6s¿ËM4é|Ù*ÒÅöQ:ã/ðë{l0GñáÕWl¨U{ðÏ¤Ýlø¦ÚË!|Ópå·¯p¸0½&lt;ÞÒÙ»»CxîWåc(ÄÈD»¡ëÄYÈCÀd³ÅÇ²hûàà=l½åÝýÁ	¬\À\µ
+*èïÊ§ÆÉ%ÎßAvâìÍ_sIÝ&#39;®Ã¼ÿ%ÎÃ©$ÎwQúþÛ`/­I=gà3&quot;D¦Ø¿&amp;Î£ò³ÇpØ&quot;í¢Zù¦ø
+¾pôËß\k(þïÏeEcÄ_ÊîgøEOwgr0\ò	srÄiÄcPI|KÆ¢±â?v~¥zÇë_J;ë]-ÎltÆ]R§î»éP­fØµ¹    IEND®B`</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://host.docker.internal:5297</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">User Controllable HTML Element Attribute (Potential XSS)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST http://host.docker.internal:5297/UserProfile/Register</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p>
+
+<p>http://host.docker.internal:5297/UserProfile/Register</p>
+
+<p>appears to include user input in:</p>
+
+<p>a(n) [input] tag [value] attribute</p>
+
+<p>The user input found was:</p>
+
+<p>FullName=ZAP</p>
+
+<p>The user-controlled value was:</p>
+
+<p>zap</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (406 bytes)</summary>
+				
+				<pre><code>POST http://host.docker.internal:5297/UserProfile/Register HTTP/1.1
+host: host.docker.internal:5297
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: http://host.docker.internal:5297/UserProfile/Register
+content-length: 101
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (101 bytes)</summary>
+				
+				<pre><code>FullName=ZAP&amp;Email=zaproxy%40example.com&amp;PhoneNumber=9999999999&amp;Password=ZAP&amp;PasswordConfirmation=ZAP</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (135 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Date: Fri, 07 Nov 2025 20:07:24 GMT
+Server: Kestrel
+content-length: 4335
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (4335 bytes)</summary>
+				
+				<pre><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Prosto&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/styles.css?v=gpp_VaeXtX13865DmBmksEI7xOdoJAGgfXE7Tk8LXxk&quot; /&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/authorizationStyles.css?v=q89W69TZWV5rd_bidZs93KYcRImi9K9gnoyWIXUWAhY&quot; /&gt;
+
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header b-v2k56ncyer&gt;
+        &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;
+            &lt;h1 b-v2k56ncyer&gt;Prosto&lt;/h1&gt;
+        &lt;/a&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;searchBox&quot;&gt;
+            &lt;input b-v2k56ncyer placeholder=&quot;Пошук&quot;&gt;
+
+            &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                &lt;img b-v2k56ncyer src=&quot;/assets/search.png&quot; alt=&quot;search&quot;&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section b-v2k56ncyer class=&quot;buttonsBox&quot;&gt;
+                &lt;a b-v2k56ncyer href=&quot;/UserProfile/Login&quot;&gt;
+                    &lt;div b-v2k56ncyer class=&quot;buttonHeader&quot;&gt;
+                        &lt;img b-v2k56ncyer src=&quot;/assets/profile.png&quot; alt=&quot;profile&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+        &lt;/section&gt;
+    &lt;/header&gt;
+    &lt;div b-v2k56ncyer class=&quot;container&quot;&gt;
+        &lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Реєстрація користувача&lt;/h2&gt;
+
+        &lt;form action=&quot;/UserProfile/Register&quot; method=&quot;post&quot;&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;fullName&quot;&gt;ПІБ&lt;/label&gt;
+                &lt;input placeholder=&quot;Іван Іванов&quot; id=&quot;fullName&quot; maxlength=&quot;500&quot; required type=&quot;text&quot; name=&quot;FullName&quot; value=&quot;ZAP&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;email&quot;&gt;Електронна пошта&lt;/label&gt;
+                &lt;input placeholder=&quot;example@gmail.com&quot; id=&quot;email&quot; type=&quot;email&quot; required name=&quot;Email&quot; value=&quot;zaproxy@example.com&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;phoneNumber&quot;&gt;Номер телефону&lt;/label&gt;
+                &lt;input placeholder=&quot;+380&quot; id=&quot;phoneNumber&quot; type=&quot;tel&quot; pattern=&quot;\+380[0-9]{9}&quot; maxlength=&quot;13&quot; required name=&quot;PhoneNumber&quot; value=&quot;9999999999&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;password&quot;&gt;Пароль&lt;/label&gt;
+                &lt;input type=&quot;password&quot; placeholder=&quot;***&quot; id=&quot;password&quot; minlength=&quot;8&quot; maxlength=&quot;16&quot; required name=&quot;Password&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;userInput&quot;&gt;
+                &lt;label for=&quot;passwordConfirmation&quot;&gt;Підтвердження паролю&lt;/label&gt;
+                &lt;input type=&quot;password&quot; placeholder=&quot;***&quot; name=&quot;PasswordConfirmation&quot; id=&quot;passwordConfirmation&quot; minlength=&quot;8&quot; maxlength=&quot;16&quot; required /&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot; id=&quot;submitButton&quot;&gt;Зареєструватися&lt;/button&gt;
+        &lt;/form&gt;
+        &lt;hr&gt;
+        &lt;p&gt;Уже є акаунт? &lt;a href=&quot;/UserProfile/Login&quot;&gt;Вхід&lt;/a&gt;&lt;/p&gt;
+        &lt;a href=&quot;/UserProfile/LoginWithGoogle&quot; class=&quot;google-btn&quot;&gt;
+            &lt;img src=&quot;/assets/google.png&quot; alt=&quot;google icon&quot;&gt; Увійти з Google
+        &lt;/a&gt;
+
+            &lt;div class=&quot;text-danger&quot;&gt;&lt;div class=&quot;validation-summary-errors&quot; data-valmsg-summary=&quot;true&quot;&gt;&lt;ul&gt;&lt;li&gt;&amp;#x41F;&amp;#x430;&amp;#x440;&amp;#x43E;&amp;#x43B;&amp;#x44C; &amp;#x43D;&amp;#x435; &amp;#x43C;&amp;#x456;&amp;#x441;&amp;#x442;&amp;#x438;&amp;#x442;&amp;#x44C; &amp;#x436;&amp;#x43E;&amp;#x434;&amp;#x43D;&amp;#x43E;&amp;#x457; &amp;#x446;&amp;#x438;&amp;#x444;&amp;#x440;&amp;#x438;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+    &lt;/div&gt;
+    &lt;footer b-v2k56ncyer&gt;
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;a b-v2k56ncyer href=&quot;/&quot;&gt;Головна&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/Home/Contacts&quot; class=&quot;category&quot;&gt;Контакти&lt;/a&gt;
+            &lt;a b-v2k56ncyer href=&quot;/UserProfile&quot;&gt;Профіль&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;h3 b-v2k56ncyer&gt;Prosto&lt;/h3&gt;
+
+        &lt;div b-v2k56ncyer class=&quot;footerInfo&quot;&gt;
+            &lt;p b-v2k56ncyer&gt;095 345 67 89&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;example@gmail.com&lt;/p&gt;
+            &lt;p b-v2k56ncyer&gt;м . Київ, вул. Володимирська 7&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>FullName</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert Types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>Absence of Anti-CSRF Tokens</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10202/">Absence of Anti-CSRF Tokens</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>9</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/352.html">https://cwe.mitre.org/data/definitions/352.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://w3c.github.io/webappsec-csp/">https://w3c.github.io/webappsec-csp/</a></li>
+										<li><a
+											href="https://web.dev/articles/csp">https://web.dev/articles/csp</a></li>
+										<li><a
+											href="https://caniuse.com/#feat=contentsecuritypolicy">https://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Cookie with SameSite Attribute None</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10054/">Cookie without SameSite Attribute</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1275.html">1275</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>User Controllable HTML Element Attribute (Potential XSS)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10031/">User Controllable HTML Element Attribute (Potential XSS)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
