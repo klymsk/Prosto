@@ -65,4 +65,70 @@ public class UserProfileController : ControllerBase
 
         return NoContent();
     }
+    
+    [HttpGet("GoogleResponse")]
+    public async Task<IActionResult> GoogleResponse()
+    {
+        var result = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+        var principal = result?.Principal;
+    
+        if (principal == null)
+            return Unauthorized(new { message = "Login failed" });
+    
+        var email = principal.FindFirstValue(ClaimTypes.Email);
+        var name = principal.FindFirstValue(ClaimTypes.Name);
+    
+        if (email == null)
+            return BadRequest(new { message = "No email from Google" });
+    
+        var user = _context.Customers.FirstOrDefault(u => u.Email == email);
+    
+        if (user == null)
+        {
+            user = new Customer
+            {
+                Email = email,
+                FullName = name,
+                PhoneNumber = "",
+                AuthProvider = "Google"
+            };
+    
+            _context.Customers.Add(user);
+            await _context.SaveChangesAsync();
+        }
+    
+        var callbackUrl =
+            $"http://localhost:5005/callback" +
+            $"?userId={user.UserId}" +
+            $"&fullName={Uri.EscapeDataString(user.FullName ?? "")}" +
+            $"&email={Uri.EscapeDataString(user.Email ?? "")}";
+    
+        return Redirect(callbackUrl);
+    }
+
+    [HttpGet("Logout")]
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index", "Home");
+    }
+    
+    [Route("blank")]
+    public IActionResult Blank()
+    {
+        return Ok("Done");
+    }
+    
+    [HttpGet("LastGoogleUser")]
+    public async Task<IActionResult> LastGoogleUser()
+    {
+        var user = await _context.Customers
+            .OrderByDescending(u => u.UserId)
+            .FirstOrDefaultAsync();
+    
+        if (user == null)
+            return NotFound();
+    
+        return Ok(user);
+    }
 }
