@@ -1,0 +1,54 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ProstoMulti.ViewModels"
+             x:Class="ProstoMulti.Views.ItemsPage">
+
+    <ContentPage.BindingContext>
+        <vm:ItemsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Padding="15" Spacing="10">
+            <Label Text="You can add new item:" TextColor="#6955D4" Margin="0, 20"/>
+
+            <Label Text="Seller ID:"/>
+            <Entry Placeholder="Seller ID" Text="{Binding SellerId}" Keyboard="Numeric" Margin="0,5"/>
+            <Label Text="Name:"/>
+            <Entry Placeholder="Name" Text="{Binding Name}" Margin="0,5"/>
+            <Label Text="Description:"/>
+            <Entry Placeholder="Description" Text="{Binding Description}" Margin="0,5"/>
+            <Label Text="Category:"/>
+            <Entry Placeholder="Category" Text="{Binding Category}" Margin="0,5"/>
+            <Label Text="Price:"/>
+            <Entry Placeholder="Price" Text="{Binding Price}" Keyboard="Numeric" Margin="0,5"/>
+
+            <Button Text="Add" Command="{Binding AddItemCommand}" BackgroundColor="#FFFFE3"/>
+            <Label Text="List of items:" Margin="0, 20"/>
+
+            <ActivityIndicator 
+            IsRunning="{Binding IsBusy}" 
+            IsVisible="{Binding IsBusy}" 
+            HeightRequest="40" />
+
+            <CollectionView ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10" BorderColor="LightGray">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" FontSize="14"/>
+                                <Label Text="{Binding Price}" TextColor="Green"/>
+                                <Button Text="Remove" BackgroundColor="#6D8196" TextColor="White"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ItemsViewModel}}, Path=DeleteItemCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

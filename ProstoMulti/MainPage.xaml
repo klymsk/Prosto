@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProstoMulti.MainPage"
+    Title="About app">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="ProstoMulti"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#5e4db2"/>
+
+            <Label Text="Клієнтський застосунок для роботи з сервером через API"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"
+                   Margin="0,0,0,10"/>
+
+            <BoxView HeightRequest="2" Color="LightGray" />
+
+            <Label Text="Про застосунок"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#333"/>
+
+            <Label Text="Цей кросплатформений клієнтський застосунок створено за допомогою .NET MAUI. Він дозволяє взаємодіяти з серверною частиною (MVC API) через HTTP-запити. 
+Застосунок реалізує архітектуру MVVM, підтримує отримання даних з бази через API та відображає їх у зручному інтерфейсі."
+                   FontSize="16"
+                   TextColor="#555"/>
+
+            <Label Text="Основні можливості:"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#444"
+                   Margin="0,20,0,0"/>
+
+            <VerticalStackLayout Spacing="8">
+                <Label Text="• Перегляд списку товарів" FontSize="16"/>
+                <Label Text="• Перегляд користувачів" FontSize="16"/>
+                <Label Text="• Перегляд елементів корзини" FontSize="16"/>
+                <Label Text="• Автоматичне завантаження даних через API" FontSize="16"/>
+                <Label Text="• Підтримка MVVM архітектури" FontSize="16"/>
+                <Label Text="• Робота з анімацією завантаження (IsBusy)" FontSize="16"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

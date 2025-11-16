@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ProstoMulti.ViewModels"
+             x:Class="ProstoMulti.Views.CartItemsPage">
+
+    <ContentPage.BindingContext>
+        <vm:CartItemsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Padding="15">
+            <Label Text="You can add new item to cart:" TextColor="#6955D4" Margin="0, 20"/>
+
+            <Label Text="User ID:"/>
+            <Entry Placeholder="User ID" Text="{Binding UserId}" Keyboard="Numeric" Margin="0,20"/>
+            <Label Text="Item ID:"/>
+            <Entry Placeholder="Item ID" Text="{Binding ItemId}" Keyboard="Numeric" Margin="0,20"/>
+            <Label Text="Quantity:"/>
+            <Entry Placeholder="Quantity" Text="{Binding Quantity}" Keyboard="Numeric" Margin="0,20"/>
+
+            <Button Text="Add" Command="{Binding AddCartItemCommand}" BackgroundColor="#FFFFE3"/>
+            <Label Text="List of items in carts:" Margin="0, 20"/>
+
+            <ActivityIndicator 
+            IsRunning="{Binding IsBusy}" 
+            IsVisible="{Binding IsBusy}" />
+
+            <CollectionView ItemsSource="{Binding CartItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10" BorderColor="LightGray">
+                            <VerticalStackLayout>
+                                <Label Text="Cart Item" FontAttributes="Bold"/>
+                                <Label Text="{Binding ItemId}" />
+                                <Label Text="{Binding UserId}" />
+                                <Label Text="Quantity:" />
+                                <Label Text="{Binding Quantity}" TextColor="Purple"/>
+                                <Button Text="Remove" BackgroundColor="#6D8196" TextColor="White"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartItemsViewModel}}, Path=DeleteCartItemCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
