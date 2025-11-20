@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.89c2151f.css",
-    "main.js": "/static/js/main.412272b5.js",
+    "main.css": "/static/css/main.6f6577ec.css",
+    "main.js": "/static/js/main.f368364a.js",
     "static/js/453.c3fce548.chunk.js": "/static/js/453.c3fce548.chunk.js",
     "static/media/iphone.png": "/static/media/iphone.a9c3a5099960a0ce78d9.png",
     "index.html": "/index.html",
-    "main.89c2151f.css.map": "/static/css/main.89c2151f.css.map",
-    "main.412272b5.js.map": "/static/js/main.412272b5.js.map",
+    "main.6f6577ec.css.map": "/static/css/main.6f6577ec.css.map",
+    "main.f368364a.js.map": "/static/js/main.f368364a.js.map",
     "453.c3fce548.chunk.js.map": "/static/js/453.c3fce548.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89c2151f.css",
-    "static/js/main.412272b5.js"
+    "static/css/main.6f6577ec.css",
+    "static/js/main.f368364a.js"
   ]
 }
