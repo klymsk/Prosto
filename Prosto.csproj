@@ -7,9 +7,6 @@
     <RootNamespace>Prosto</RootNamespace>
   </PropertyGroup>
 	<ItemGroup>
-		<InternalsVisibleTo Include="TestProsto" />
-	</ItemGroup>
-	<ItemGroup>
 	  <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
 	  <PackageReference Include="Bogus" Version="2.13.1" />
 	  <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.5" />
