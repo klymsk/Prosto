@@ -60,6 +60,23 @@ Detailed project requirements, architecture decisions, and specifications are av
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+
+### Homepage
+<img width="2544" height="1257" alt="Homepage screenshot" src="https://github.com/user-attachments/assets/ddda317e-77fd-4639-a7fd-afda905a2702" />
+
+### Category page
+<img width="2544" height="1257" alt="Category page screenshot" src="https://github.com/user-attachments/assets/ad584f85-4469-4a15-bfb0-e883211ca25c" />
+
+### Login page
+<img width="2544" height="1262" alt="Login page screenshot" src="https://github.com/user-attachments/assets/5655ba3d-b6ed-4546-b3e9-7d80576414da" />
+
+</div>
+
+---
+
 ## Team
 
 - Olexandr Klymenko — Project owner, React development (GitHub: @klymsk)
