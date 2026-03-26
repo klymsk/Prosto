@@ -18,5 +18,3 @@ dotnet ef migrations add InitialCreate_SqlServer -c AppDbContext --output-dir Mi
 dotnet ef migrations add InitialCreate_Sqlite -c AppDbContext --output-dir Migrations/SQLite
  г) оновіть бд за допомогою команди:
  dotnet ef database update -c AppDbContext
-
-Готово =), за питаннями пишіть в тг
